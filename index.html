@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inventory Reservation System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <h1>Inventory Reservation System</h1>
+  </nav>
+
+
+  <div class="top-buttons">
+
+  <button onclick="resetProducts()">
+    Reset Products
+  </button>
+
+</div>
+
+  <div class="container" id="productContainer"></div>
+
+
+
+  <h2 class="history-title">
+  Reservation History
+</h2>
+
+<table id="historyTable">
+
+  <thead>
+
+    <tr>
+      <th>Product</th>
+      <th>Warehouse</th>
+      <th>Quantity</th>
+      <th>Status</th>
+      <th>Expiry</th>
+    </tr>
+
+  </thead>
+
+  <tbody id="historyBody">
+
+  </tbody>
+
+</table>
+
+  <!-- CHECKOUT MODAL -->
+
+  <div class="modal" id="checkoutModal">
+
+    <div class="modal-content">
+
+      <h2>Checkout Page</h2>
+
+      <h3 id="productName"></h3>
+
+      <p id="warehouse"></p>
+
+      <p id="quantity"></p>
+
+<p id="status"></p>
+
+      <h2 id="timer"></h2>
+      <div class="progress-container">
+
+  <div class="progress-bar" id="progressBar">
+
+  </div>
+
+</div>
+
+      <div class="buttons">
+
+        <button class="confirm-btn" onclick="confirmPurchase()">
+          Confirm Purchase
+        </button>
+
+        <button class="cancel-btn" onclick="cancelReservation()">
+          Cancel Reservation
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="toastBox"></div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
